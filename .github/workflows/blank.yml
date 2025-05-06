@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      #- uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
       #- name: Stop all docker containers
@@ -32,6 +32,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
+          sudo git clone https://github.com/dannyatcornellconsulting/nginx.git
           sudo docker stop $(docker ps -a -q),
           sudo docker rm $(docker ps -a -q),
           sudo docker build -t nginx1,
