@@ -32,14 +32,14 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          sudo rm -f -r '/etc/repos/nginx' ,
-          cd /etc/repos/ ,
-          sudo git clone https://github.com/dannyatcornellconsulting/nginx.git ,
-          #sudo docker stop $(docker ps -a -q) ,
-          #sudo docker rm $(docker ps -a -q) ,
-          sudo rm -f -r '/etc/docker/nginx' ,
-          sudo mkdir '/etc/docker/nginx' ,
-          cp '/etc/repos/nginx/index.html' '/etc/docker/nginx/index.html' ,
-          cd '/Desktop/docker/nginx/' ,
-          sudo docker build -t nginx ,
+          sudo rm -f -r '/etc/repos/nginx',
+          cd /etc/repos/,
+          sudo git clone https://github.com/dannyatcornellconsulting/nginx.git,
+          #sudo docker stop $(docker ps -a -q),
+          #sudo docker rm $(docker ps -a -q),
+          sudo rm -f -r '/etc/docker/nginx',
+          sudo mkdir '/etc/docker/nginx',
+          cp '/etc/repos/nginx/index.html' '/etc/docker/nginx/index.html',
+          cd '/Desktop/docker/nginx/',
+          sudo docker build -t nginx,
           sudo docker run --name nginxweb1 -p 8080:80 nginx .
