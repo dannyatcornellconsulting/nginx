@@ -6,6 +6,7 @@
 echo $_SERVER['SERVER_ADDR'];
 echo "<br>";
 echo $_SERVER['SERVER_NAME'];
+echo gethostname();
 ?>
 </body>
 </html>
