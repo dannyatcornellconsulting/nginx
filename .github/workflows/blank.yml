@@ -37,7 +37,7 @@ jobs:
           #sudo docker stop $(docker ps -a -q),
           #sudo docker rm $(docker ps -a -q),
           #sudo rm -r /etc/repos/nginx,
-          sudo rm -r /Desktop/docker/nginx1/,
+          #sudo rm -r /Desktop/docker/nginx1/,
           sudo cp /etc/repos/nginx/index.html /Desktop/docker/nginx1/index.html,
           sudo cd /Desktop/docker/nginx1/,
           sudo docker build -t nginx1,
