@@ -33,7 +33,9 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo git clone https://github.com/dannyatcornellconsulting/nginx.git
-          sudo docker stop $(docker ps -a -q),
-          sudo docker rm $(docker ps -a -q),
+          #sudo docker stop $(docker ps -a -q),
+          #sudo docker rm $(docker ps -a -q),
+          sudo cp /etc/repos/nginx/index.html /Desktop/docker/nginx1/index.html
+          sudo cd /Desktop/docker/nginx1/
           sudo docker build -t nginx1,
           sudo docker run --name nginxweb1 -p 8080:80 nginx1.
