@@ -42,7 +42,7 @@ jobs:
           cp '/etc/repos/nginx/index.html' '/etc/docker/nginx/index.html'
           cp '/etc/repos/nginx/Dockerfile' '/etc/docker/nginx/Dockerfile'
           cd '/etc/docker/nginx/'
-          sudo docker stop --force $(docker ps -a -q)
-          sudo docker rm --force $(docker ps -a -q)
+          sudo docker stop $(docker ps -a -q) 2> /dev/null
+          sudo docker rm $(docker ps -a -q) 2> /dev/null
           sudo docker build -t nginx .
           sudo docker run --name nginxweb1 -p 8080:80 nginx
