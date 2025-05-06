@@ -40,6 +40,7 @@ jobs:
           sudo rm -f -r '/etc/docker/nginx'
           sudo mkdir '/etc/docker/nginx'
           cp '/etc/repos/nginx/index.html' '/etc/docker/nginx/index.html'
+          cp '/etc/repos/nginx/Dockerfile' '/etc/docker/nginx/Dockerfile'
           cd '/etc/docker/nginx/'
           sudo docker build -t nginx
           sudo docker run --name nginxweb1 -p 8080:80 nginx .
