@@ -37,9 +37,9 @@ jobs:
           sudo git clone https://github.com/dannyatcornellconsulting/nginx.git
           #sudo docker stop $(docker ps -a -q),
           #sudo docker rm $(docker ps -a -q),
-          sudo rm -f -r /home/k8admin/Desktop/docker/nginx1/,
-          mkdir /home/k8admin/Desktop/docker/nginx1/,
-          sudo cp /etc/repos/nginx/index.html /Desktop/docker/nginx1/index.html,
+          sudo rm -f -r /etc/docker/nginx1/,
+          mkdir /etc/docker/nginx1/,
+          sudo cp /etc/repos/nginx/index.html /etc/docker/nginx1/index.html,
           cd /Desktop/docker/nginx1/,
           sudo docker build -t nginx1,
           sudo docker run --name nginxweb1 -p 8080:80 nginx1 .
