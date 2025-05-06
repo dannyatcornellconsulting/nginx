@@ -40,4 +40,4 @@ jobs:
           sudo cp /etc/repos/nginx/index.html /Desktop/docker/nginx1/index.html
           sudo cd /Desktop/docker/nginx1/
           sudo docker build -t nginx1,
-          sudo docker run --name nginxweb1 -p 8080:80 nginx1.
+          sudo docker run --name nginxweb1 -p 8080:80 nginx1 .
